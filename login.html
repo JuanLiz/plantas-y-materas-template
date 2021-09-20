@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+
+    <!--Vendor files-->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!--Main CSS file-->
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+<body class="vh-100 vw-100">
+    <div class="background container-fluid">
+        <div class="bg-img"></div>
+    </div>
+    <div class="nomargin row align-items-center vw-100 vh-100" >
+        <div class="col-12">
+            <div class="container login h-100">
+                <div class="row align-items-center">
+                    <div class="col-12 pt-5 pb-4">
+                        <img class=" px-5 " src="img/logo-l.png" alt="">
+                    </div>
+                    
+                    <div class=" col-xl-6 col-md-6 col-sm-12 vh-5 px-4 ">
+                        <div class="container justify-content-center pb-5">
+                            <div class="noborder card">
+                                <div class="card-body  h-100" style="margin-bottom: 15%;"> 
+                                    <h1 class="card-title pcolor">Iniciar sesión</h1>
+                                    <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                                        <div class="mt-5">
+                                            <label class="mb-2 input-label" for="username">Nombre de usuario</label>
+                                            <input id="username" type="text" class="form-control " name="username" value="" required="" autofocus="">
+                                            <div class="invalid-feedback">
+                                                Usuario invalido
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <div class="mb-2 w-100">
+                                                <label class="input-label" for="password">Contraseña</label>
+                                            </div>
+                                            <input id="password" type="password" class="form-control" name="password" required="">
+                                            <div class="invalid-feedback">
+                                                Password is required
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center mt-5">
+
+                                            <button type="submit" class="pcolorb btn btn-primary w-100 ms-auto">
+                                                <strong>Ingresar</strong>
+                                                </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="3000">
+                                    <img src="img/i-add.svg " class="d-block mx-auto" width="40%">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="img/i-plant.svg" class="d-block mx-auto" width="40%">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="img/i-inventory.svg" class="d-block mx-auto" width="40%">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="img/i-todo.svg" class="d-block mx-auto" width="40%">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h6 class="text-center">
+                                Ingresa para acceder a la administración de usuarios, proveedores y productos
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--JS Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
