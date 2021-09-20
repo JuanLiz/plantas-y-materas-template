@@ -30,7 +30,7 @@ h2, h3, h4, h5, h6{
 }
 
 .bg-img{
-    background-image: url(img/bg.png);
+    background-image: url(./img/bg.png);
     background-size: cover;
     min-width: 100%;
     vertical-align: top;
