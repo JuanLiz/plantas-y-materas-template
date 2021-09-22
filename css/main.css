@@ -1,5 +1,16 @@
+html {
+    height: -webkit-fill-available;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 h1{
@@ -12,6 +23,9 @@ h2, h3, h4, h5, h6{
     font-weight: 700;
 }
 
+.nav a{
+    color: black;
+}
 
 .background{
     padding: 0;
@@ -35,7 +49,7 @@ h2, h3, h4, h5, h6{
     vertical-align: top;
     margin-top: 0px;
     height: 100%;
-    background-color: #CAF0D3;
+    background-color: #ffffff;
     display: inline-block;
     overflow: hidden;
     z-index: 1;
