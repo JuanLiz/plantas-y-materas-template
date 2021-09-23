@@ -1,16 +1,7 @@
-html {
-    height: -webkit-fill-available;
-}
 
 body{
     font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100vh;
-    height: -webkit-fill-available;
-    max-height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
+
 }
 
 h1{
@@ -23,13 +14,22 @@ h2, h3, h4, h5, h6{
     font-weight: 700;
 }
 
-.nav a{
-    color: black;
-}
-
-.nav span{
+span{
     vertical-align: middle;
     
+}
+
+.content{
+    overflow-y: auto;
+    height: fit-content;
+}
+
+.sidebar{
+    overflow: hidden;
+}
+
+.nav a{
+    color: #212529;
 }
 
 .nav i{
@@ -81,4 +81,17 @@ h2, h3, h4, h5, h6{
 .pcolorb {
     background-color: #39aa36;
     outline-color: #39aa36;
+}
+
+
+@media (max-width:768px) {
+    .sidebar{
+        display: none;
+    }
+}
+
+@media (min-width:1024px) {
+    .little{
+        display: none !important;
+    }
 }
