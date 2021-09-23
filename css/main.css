@@ -27,6 +27,17 @@ h2, h3, h4, h5, h6{
     color: black;
 }
 
+.nav span{
+    vertical-align: middle;
+    
+}
+
+.nav i{
+    font-size: 1.8rem;
+    vertical-align: middle;
+}
+
+
 .background{
     padding: 0;
     height: 100%;
