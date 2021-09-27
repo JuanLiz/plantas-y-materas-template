@@ -19,11 +19,11 @@
     
     </head>
 
-<body >  
+<body>  
   <div class="d-flex">
 
     <!--Sidebar-->
-    <div class="sidebar vh-100 p-3 bg-light fw-bold" style="width: 280px;">
+    <div class="sidebar p-3 bg-light fw-bold" style="width: 280px;">
       <ul class="nav mb-auto">
         <a href="/" class=" px-3 py-2 me-auto  text-decoration-none">
           <img src="img/logo.svg" width="160" alt="">
@@ -76,7 +76,7 @@
 
     <!--Navbar-->
     <div class="w-100">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fw-bold p-3">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light fw-bold p-3">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -147,31 +147,18 @@
 
       <div class="content p-4">
         <section>
-          <div class="container">
+          <div class="mainc">
             
-            <!--Welcome and report button-->
+            <!--Welcome-->
             <div class="row pb-5 align-items-center">
               <div class="col-md-8 align-items-center align-middle">
                 <h1 class="mb-0">Bienvenido, Admin!</h1>
               </div>
               <div class="col-md-4 g-0 my-auto">
                 <!--Button for report-->
-                <div class="d-md-flex me-2 justify-content-end collapse navbar-collapse">
-                  <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <button class="btn btn-primary my-auto fw-bold" type="button">
-                          <i class="me-1 uil uil-download-alt lead"></i>Genera un informe
-                        </button>
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                <div class="d-flex me-2 justify-content-end">
+                  <img class="" src="img/undraw_moving.svg" alt="" width="300">
+
                 </div>
               </div>
             </div>
@@ -179,7 +166,7 @@
             <!--Cards-->
             <div class="row pb-3">
               <!--Users-->
-              <div class="col-md-4 col-sm-6 pb-3">
+              <div class="col-md-4 pb-3">
                 <div class="card h-100 shadow">
                   <div class="card-body">
                     <div class="row align-items-center g-0">
@@ -241,6 +228,7 @@
                   </div>
                 </div>
               </div>
+              <!--Last items added-->
               <div class="col-md-5">
                 <div class="card p-2 h-100 shadow">
                   <div class="card-body">
@@ -250,19 +238,29 @@
                         <tbody>
                           <tr class="align-middle">
                             <th scope="row"><i class="me-1 uil uil-tag-alt" style="font-size: 1.8rem;"></i></th>
-                            <td>Tierra abonada 4Kg</td>
-                            <td class="pcolor fst-italic">$15400</td>
+                            <td class="fw-bold">Tierra abonada 4kg</td>
+                            <td class="pcolor">$15400</td>
                           </tr>
                           <tr class="align-middle">
                             <th scope="row"><i class="me-1 uil uil-tag-alt" style="font-size: 1.8rem;"></i></th>
-                            <td>Tierra abonada 4Kg</td>
-                            <td class="pcolor fst-italic">$15400</td>
+                            <td class="fw-bold">Suculenta Árbol de Jade</td>
+                            <td class="pcolor">$48000</td>
                           </tr>
                           <tr class="align-middle">
                             <th scope="row"><i class="me-1 uil uil-tag-alt" style="font-size: 1.8rem;"></i></th>
-                            <td>Tierra abonada 4Kg</td>
-                            <td class="pcolor fst-italic">$15400</td>
+                            <td class="fw-bold">Cactus decorativo 8cm</td>
+                            <td class="pcolor">$26000</td>
                           </tr>
+                          <tr class="align-middle">
+                            <th scope="row"><i class="me-1 uil uil-tag-alt" style="font-size: 1.8rem;"></i></th>
+                            <td class="fw-bold">Matera con soporte metálico</td>
+                            <td class="pcolor">$5000</td>
+                          </tr>   
+                          <tr class="align-middle">
+                            <th scope="row"><i class="me-1 uil uil-tag-alt" style="font-size: 1.8rem;"></i></th>
+                            <td class="fw-bold">Combo cónica con Palo de Brasil 60cm</td>
+                            <td class="pcolor">$128000</td>
+                          </tr>                         
                         </tbody>
                       </table>
                     </div>

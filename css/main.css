@@ -4,17 +4,17 @@ body{
 
 }
 
-h1{
+h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
 }
 
-h2, h3, h4, h5, h6{
+h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
-span{
+span {
     vertical-align: middle;
     
 }
@@ -22,6 +22,12 @@ span{
 .content{
     overflow-y: auto;
     height: fit-content;
+}
+
+.mainc {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .chart-area {
@@ -33,9 +39,14 @@ span{
     }
   }
 
-.sidebar{
-    overflow: hidden;
-}
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 
 .nav a{
     color: #212529;
@@ -46,8 +57,8 @@ span{
     vertical-align: middle;
 }
 
-.card td{
-    font-weight: 700;
+.card th{
+    padding-right: 0;
 }
 
 .background{
