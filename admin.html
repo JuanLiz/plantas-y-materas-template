@@ -145,10 +145,132 @@
         </div>
       </nav>
 
-      <div class="content pb-3">
+      <div class="content p-4">
         <section>
           <div class="container">
-            <div class ></div>
+            
+            <!--Welcome and report button-->
+            <div class="row pb-5 align-items-center">
+              <div class="col-md-8 align-items-center align-middle">
+                <h1 class="mb-0">Bienvenido, Admin!</h1>
+              </div>
+              <div class="col-md-4 g-0 my-auto">
+                <!--Button for report-->
+                <div class="d-md-flex me-2 justify-content-end collapse navbar-collapse">
+                  <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-primary my-auto fw-bold" type="button">
+                          <i class="me-1 uil uil-download-alt lead"></i>Genera un informe
+                        </button>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--Cards-->
+            <div class="row pb-3">
+              <!--Users-->
+              <div class="col-md-4 col-sm-6 pb-3">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <div class="row align-items-center g-0">
+                      <div class="col me-1">
+                        <h6 class="fw-normal card-title pcolor">Usuarios</h6>
+                        <h2>37</h2>
+                      </div>
+                      <div class="col-auto">
+                        <img src="img/i-users.svg" alt="" width="70">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Providers-->
+              <div class="col-md-4 pb-3">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <div class="row align-items-center g-0">
+                      <div class="col me-1">
+                        <h6 class="fw-normal card-title pcolor">Proveedores</h6>
+                        <h2>11</h2>
+                      </div>
+                      <div class="col-auto">
+                        <img src="img/i-boxes.svg" alt="" width="70">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Products-->
+              <div class="col-md-4 pb-3">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <div class="row align-items-center g-0">
+                      <div class="col me-1">
+                        <h6 class="fw-normal card-title pcolor">Productos</h6>
+                        <h2>250</h2>
+                      </div>
+                      <div class="col-auto">
+                        <img src="img/i-plant.svg" alt="" width="70">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>         
+          
+            <!--Chart and Items-->
+            <div class="row pb-5">
+              <!--Chart-->
+              <div class="col-md-7">
+                <div class="card p-2 h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title pcolor fw-normal">Ventas de la última semana</h2>
+                    <div class="chart-area">
+                      <canvas id="myAreaChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="card p-2 h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title pcolor fw-normal">Últimos productos agregados</h5>
+                    <div class="py-3">
+                      <table class="table table-striped">
+                        <tbody>
+                          <tr class="align-middle">
+                            <th scope="row"><i class="me-1 uil uil-tag-alt" style="font-size: 1.8rem;"></i></th>
+                            <td>Tierra abonada 4Kg</td>
+                            <td class="pcolor fst-italic">$15400</td>
+                          </tr>
+                          <tr class="align-middle">
+                            <th scope="row"><i class="me-1 uil uil-tag-alt" style="font-size: 1.8rem;"></i></th>
+                            <td>Tierra abonada 4Kg</td>
+                            <td class="pcolor fst-italic">$15400</td>
+                          </tr>
+                          <tr class="align-middle">
+                            <th scope="row"><i class="me-1 uil uil-tag-alt" style="font-size: 1.8rem;"></i></th>
+                            <td>Tierra abonada 4Kg</td>
+                            <td class="pcolor fst-italic">$15400</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </div>
@@ -158,7 +280,9 @@
   </div>
   
     <!--JS Scripts-->
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>      
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>      
+    <script src="js/area-chart.js"></script>
 
 </body>
 </html>

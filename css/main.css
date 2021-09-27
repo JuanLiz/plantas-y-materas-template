@@ -24,6 +24,15 @@ span{
     height: fit-content;
 }
 
+.chart-area {
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      height: 20rem;
+    }
+  }
+
 .sidebar{
     overflow: hidden;
 }
@@ -37,6 +46,9 @@ span{
     vertical-align: middle;
 }
 
+.card td{
+    font-weight: 700;
+}
 
 .background{
     padding: 0;
