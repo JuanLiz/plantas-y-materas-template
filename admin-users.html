@@ -166,8 +166,8 @@
             </div>
 
             <!--Buttons-->
-            <div class="d-flex justify-content-end pb-5">
-              <button class="mx-2 align-items-center btn btn-outline-primary">
+            <div class="d-flex justify-content-center pb-5">
+              <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                 <span class="d-block me-1">
                   <i class="uil uil-user-plus fs-3 lead"></i>
                 </span>
@@ -175,7 +175,7 @@
                   Agregar usuario
                 </span>
               </button>
-              <button class="mx-2 align-items-center btn btn-outline-primary">
+              <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
                 <span class="d-block me-1">
                   <i class="uil uil-user-check fs-3 lead"></i>
                 </span>
@@ -183,7 +183,7 @@
                   Actualizar usuario
                 </span>
               </button>
-              <button class="mx-2 align-items-center btn btn-outline-danger">
+              <button class="mx-2 align-items-center btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
                 <span class="d-block me-1">
                   <i class="uil uil-user-times fs-3 lead"></i>
                 </span>
@@ -191,7 +191,239 @@
                   Eliminar usuario
                 </span>
               </button>
-            </div>
+            </div><!--End Buttons-->
+
+            <!-- Modals-->
+            <!--Create Modal-->
+            <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <form method="POST" class="needs-validation" novalidate autocomplete="off">                 
+                    <!--Form fields-->
+                    <div class="modal-body">
+                        <!--ID-->
+                        <div class="form-floating mb-3">
+                          <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
+                          <label for="floatingId">Cédula de ciudadanía</label>
+                          <div class="invalid-feedback">
+                            Proporciona la cédula del usuario
+                          </div>
+                        </div>
+                        <!--Name-->
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
+                          <label for="floatingName">Nombre completo</label>
+                          <div class="invalid-feedback">
+                            Proporciona el nombre completo
+                          </div>
+                        </div>
+                        <!--Email-->
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                          <label for="floatingEmail">Correo electrónico</label>
+                          <div class="invalid-feedback">
+                            Proporciona un correo electrónico válido
+                          </div>
+                        </div>
+                        <!--User-->
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
+                          <label for="floatingUser">Nombre de usuario</label>
+                          <div class="invalid-feedback">
+                            Proporciona un nombre de usuario válido
+                          </div>
+                        </div>
+                        <!--Password-->
+                        <div class="form-floating">
+                          <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
+                          <label for="floatingPass">Contraseña</label>
+                          <div class="invalid-feedback">
+                            Proporciona una contraseña válida
+                          </div>
+                        </div>                 
+                    </div><!--End Form fields-->
+                    <!--Submit buttons-->
+                    <div class="modal-footer">
+                      <button type="button" class="mx-1 align-items-center btn btn-outline-secondary" data-bs-dismiss="modal">
+                        <span class="d-block me-2">
+                          <i class="uil uil-times fs-4"></i>
+                        </span>
+                        <span class="d-block align-middle fw-bold">
+                          Cancelar
+                        </span>
+                      </button>
+                      <button type="submit" class="mx-1 align-items-center btn btn-outline-primary">
+                        <span class="d-block me-2">
+                          <i class="uil uil-save fs-4"></i>
+                        </span>
+                        <span class="d-block align-middle fw-bold">
+                          Agregar
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div><!--End Create Modal-->
+
+            <!--Update Modal-->
+            <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Actualizar usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <form method="POST" class="needs-validation" novalidate="" autocomplete="off">                 
+                    <!--Form fields-->
+                    <div class="modal-body">
+                      <!--ID-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
+                        <label for="floatingId">Cédula de ciudadanía</label>
+                        <div class="invalid-feedback">
+                          Proporciona la cédula del usuario
+                        </div>
+                      </div>
+                      <!--Name-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
+                        <label for="floatingName">Nombre completo</label>
+                        <div class="invalid-feedback">
+                          Proporciona el nombre completo
+                        </div>
+                      </div>
+                      <!--Email-->
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                        <label for="floatingEmail">Correo electrónico</label>
+                        <div class="invalid-feedback">
+                          Proporciona un correo electrónico válido
+                        </div>
+                      </div>
+                      <!--User-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
+                        <label for="floatingUser">Nombre de usuario</label>
+                        <div class="invalid-feedback">
+                          Proporciona un nombre de usuario válido
+                        </div>
+                      </div>
+                      <!--Password-->
+                      <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
+                        <label for="floatingPass">Contraseña</label>
+                        <div class="invalid-feedback">
+                          Proporciona una contraseña válida
+                        </div>
+                      </div>                 
+                  </div><!--End Form fields-->
+                    <!--Submit buttons-->
+                    <div class="modal-footer">
+                      <button type="button" class="mx-1 align-items-center btn btn-outline-secondary" data-bs-dismiss="modal">
+                        <span class="d-block me-2">
+                          <i class="uil uil-times fs-4"></i>
+                        </span>
+                        <span class="d-block align-middle fw-bold">
+                          Cancelar
+                        </span>
+                      </button>
+                      <button type="submit" class="mx-1 align-items-center btn btn-outline-primary">
+                        <span class="d-block me-2">
+                          <i class="uil uil-sync fs-4"></i>
+                        </span>
+                        <span class="d-block align-middle fw-bold">
+                          Actualizar
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div><!--End Update Modal-->
+            
+            <!--Delete Modal-->
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <form method="POST" class="needs-validation" novalidate="" autocomplete="off">                 
+                    <!--Form fields-->
+                    <div class="modal-body">
+                      <!--ID-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
+                        <label for="floatingId">Cédula de ciudadanía</label>
+                        <div class="invalid-feedback">
+                          Proporciona la cédula del usuario
+                        </div>
+                      </div>
+                      <!--Name-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
+                        <label for="floatingName">Nombre completo</label>
+                        <div class="invalid-feedback">
+                          Proporciona el nombre completo
+                        </div>
+                      </div>
+                      <!--Email-->
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                        <label for="floatingEmail">Correo electrónico</label>
+                        <div class="invalid-feedback">
+                          Proporciona un correo electrónico válido
+                        </div>
+                      </div>
+                      <!--User-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
+                        <label for="floatingUser">Nombre de usuario</label>
+                        <div class="invalid-feedback">
+                          Proporciona un nombre de usuario válido
+                        </div>
+                      </div>
+                      <!--Password-->
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
+                        <label for="floatingPass">Contraseña</label>
+                        <div class="invalid-feedback">
+                          Proporciona una contraseña válida
+                        </div>
+                      </div>
+                      <p class="text-danger m-1">Esta acción no se puede deshacer. Procede con cuidado</p>              
+                  </div><!--End Form fields-->
+                    <!--Submit buttons-->
+                    <div class="modal-footer">
+                      <button type="button" class="mx-1 align-items-center btn btn-outline-secondary" data-bs-dismiss="modal">
+                        <span class="d-block me-2">
+                          <i class="uil uil-times fs-4"></i>
+                        </span>
+                        <span class="d-block align-middle fw-bold">
+                          Cancelar
+                        </span>
+                      </button>
+                      <button type="submit" class="mx-1 align-items-center btn btn-outline-danger">
+                        <span class="d-block me-2">
+                          <i class="uil uil-trash fs-4"></i>
+                        </span>
+                        <span class="d-block align-middle fw-bold">
+                          Eliminar
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div><!--End Delete Modal-->            
+            <!--End modals-->
+
             <!--Users table-->            
             <div class="p-2 mx-auto">
               <table id="dataTable" class="table table-responsive table-striped"  style="width:100%">
@@ -353,6 +585,7 @@
   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" ></script>
   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
   <script src="js/data-table.js"></script>
+  <script src="js/validation.js"></script>
      
 
 
