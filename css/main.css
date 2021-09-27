@@ -48,6 +48,10 @@ span {
     overflow-y: auto;
   }
 
+.active {
+    color: #39aa36 !important;
+}
+
 .nav a{
     color: #212529;
 }
@@ -59,6 +63,14 @@ span {
 
 .card th{
     padding-right: 0;
+}
+
+.btn {
+    margin: 0;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .background{
@@ -109,6 +121,12 @@ span {
 
 @media (max-width:768px) {
     .sidebar{
+        display: none;
+    }
+}
+
+@media (max-width:425px) {
+    .big{
         display: none;
     }
 }
