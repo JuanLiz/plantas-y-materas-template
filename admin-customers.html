@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gestión de usuarios - Plantas y Materas</title>
+        <title>Gestión de clientes - Plantas y Materas</title>
     
         <!--Vendor files-->
         <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
@@ -38,13 +38,13 @@
           </a>
         </li>
         <li>
-          <a href="admin-users.html" class="nav-link active">
+          <a href="admin-users.html" class="nav-link">
             <i class="me-2 uil uil-user-square"></i>
             <span>Usuarios</span> 
           </a>
         </li>
         <li>
-          <a href="admin-customers.html" class="nav-link">
+          <a href="admin-customers.html" class="nav-link active">
             <i class="me-2 uil uil-smile-beam"></i>
             <span>Clientes</span>
           </a>
@@ -101,13 +101,13 @@
                 </a>
               </li>
               <li>
-                <a href="admin-users.html" class="nav-link active">
+                <a href="admin-users.html" class="nav-link">
                   <i class="me-2 uil uil-user-square"></i>
                   <span>Usuarios</span> 
                 </a>
               </li>
               <li>
-                <a href="admin-customers.html" class="nav-link">
+                <a href="admin-customers.html" class="nav-link active">
                   <i class="me-2 uil uil-smile-beam"></i>
                   <span>Clientes</span>
                 </a>
@@ -155,12 +155,12 @@
             <!--Welcome-->
             <div class="row pb-5 align-items-center">
               <div class="col-md-8 align-items-center align-middle">
-                <h1 class="mb-0">Gestión de usuarios</h1>
+                <h1 class="mb-0">Gestión de clientes</h1>
               </div>
               <div class="col-md-4 g-0 my-auto">
                 <!--Illustration-->
                 <div class=" d-flex me-2 justify-content-end">
-                  <img class="big" src="img/undraw_Connecting_Teams.svg" alt="" width="180" >
+                  <img class="big" src="img/undraw_people_tax5.svg" alt="" width="230" >
                 </div>
               </div>
             </div>
@@ -169,26 +169,26 @@
             <div class="d-flex justify-content-center pb-5">
               <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                 <span class="d-block me-1">
-                  <i class="uil uil-user-plus fs-3 lead"></i>
+                  <i class="uil uil-plus-circle fs-3 lead"></i>
                 </span>
                 <span class="d-block align-middle fw-bold">
-                  Agregar usuario
+                  Agregar cliente
                 </span>
               </button>
               <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
                 <span class="d-block me-1">
-                  <i class="uil uil-user-check fs-3 lead"></i>
+                  <i class="uil uil-check-circle fs-3 lead"></i>
                 </span>
                 <span class="d-block align-middle fw-bold">
-                  Actualizar usuario
+                  Actualizar cliente
                 </span>
               </button>
               <button class="mx-2 align-items-center btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
                 <span class="d-block me-1">
-                  <i class="uil uil-user-times fs-3 lead"></i>
+                  <i class="uil uil-times-circle fs-3 lead"></i>
                 </span>
                 <span class="d-block align-middle fw-bold">
-                  Eliminar usuario
+                  Eliminar cliente
                 </span>
               </button>
             </div><!--End Buttons-->
@@ -199,52 +199,52 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar usuario</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar cliente</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <form method="POST" class="needs-validation" novalidate autocomplete="off">                 
                     <!--Form fields-->
                     <div class="modal-body">
-                        <!--ID-->
-                        <div class="form-floating mb-3">
-                          <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
-                          <label for="floatingId">Cédula de ciudadanía</label>
-                          <div class="invalid-feedback">
-                            Proporciona la cédula del usuario
-                          </div>
+                      <!--ID-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
+                        <label for="floatingId">Cédula de ciudadanía</label>
+                        <div class="invalid-feedback">
+                          Proporciona la cédula del cliente
                         </div>
-                        <!--Name-->
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
-                          <label for="floatingName">Nombre completo</label>
-                          <div class="invalid-feedback">
-                            Proporciona el nombre completo
-                          </div>
+                      </div>
+                      <!--Name-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
+                        <label for="floatingName">Nombre completo</label>
+                        <div class="invalid-feedback">
+                          Proporciona el nombre completo
                         </div>
-                        <!--Email-->
-                        <div class="form-floating mb-3">
-                          <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
-                          <label for="floatingEmail">Correo electrónico</label>
-                          <div class="invalid-feedback">
-                            Proporciona un correo electrónico válido
-                          </div>
+                      </div>
+                      <!--Email-->
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                        <label for="floatingEmail">Correo electrónico</label>
+                        <div class="invalid-feedback">
+                          Proporciona un correo electrónico válido
                         </div>
-                        <!--User-->
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
-                          <label for="floatingUser">Nombre de usuario</label>
-                          <div class="invalid-feedback">
-                            Proporciona un nombre de usuario válido
-                          </div>
+                      </div>
+                      <!--Address-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
+                        <label for="floatingUser">Dirección</label>
+                        <div class="invalid-feedback">
+                          Proporciona una dirección válida
                         </div>
-                        <!--Password-->
-                        <div class="form-floating">
-                          <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
-                          <label for="floatingPass">Contraseña</label>
-                          <div class="invalid-feedback">
-                            Proporciona una contraseña válida
-                          </div>
-                        </div>                 
+                      </div>
+                      <!--Phone-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingPhone" placeholder="3002485723" required>
+                        <label for="floatingPhone">Número de teléfono</label>
+                        <div class="invalid-feedback">
+                          Proporciona una número de teléfono válido
+                        </div>
+                      </div>               
                     </div><!--End Form fields-->
                     <!--Submit buttons-->
                     <div class="modal-footer">
@@ -275,7 +275,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Actualizar usuario</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Actualizar cliente</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <form method="POST" class="needs-validation" novalidate="" autocomplete="off">                 
@@ -286,7 +286,7 @@
                         <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
                         <label for="floatingId">Cédula de ciudadanía</label>
                         <div class="invalid-feedback">
-                          Proporciona la cédula del usuario
+                          Proporciona la cédula del cliente
                         </div>
                       </div>
                       <!--Name-->
@@ -305,22 +305,22 @@
                           Proporciona un correo electrónico válido
                         </div>
                       </div>
-                      <!--User-->
+                      <!--Address-->
                       <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
-                        <label for="floatingUser">Nombre de usuario</label>
+                        <label for="floatingUser">Dirección</label>
                         <div class="invalid-feedback">
-                          Proporciona un nombre de usuario válido
+                          Proporciona una dirección válida
                         </div>
                       </div>
-                      <!--Password-->
-                      <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
-                        <label for="floatingPass">Contraseña</label>
+                      <!--Phone-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingPhone" placeholder="3002485723" required>
+                        <label for="floatingPhone">Número de teléfono</label>
                         <div class="invalid-feedback">
-                          Proporciona una contraseña válida
+                          Proporciona una número de teléfono válido
                         </div>
-                      </div>                 
+                      </div>               
                   </div><!--End Form fields-->
                     <!--Submit buttons-->
                     <div class="modal-footer">
@@ -351,7 +351,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Eliminar usuario</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar cliente</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <form method="POST" class="needs-validation" novalidate="" autocomplete="off">                 
@@ -362,7 +362,7 @@
                         <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
                         <label for="floatingId">Cédula de ciudadanía</label>
                         <div class="invalid-feedback">
-                          Proporciona la cédula del usuario
+                          Proporciona la cédula del cliente
                         </div>
                       </div>
                       <!--Name-->
@@ -381,20 +381,20 @@
                           Proporciona un correo electrónico válido
                         </div>
                       </div>
-                      <!--User-->
+                      <!--Address-->
                       <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
-                        <label for="floatingUser">Nombre de usuario</label>
+                        <label for="floatingUser">Dirección</label>
                         <div class="invalid-feedback">
-                          Proporciona un nombre de usuario válido
+                          Proporciona una dirección válida
                         </div>
                       </div>
-                      <!--Password-->
+                      <!--Phone-->
                       <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
-                        <label for="floatingPass">Contraseña</label>
+                        <input type="text" class="form-control" id="floatingPhone" placeholder="3002485723" required>
+                        <label for="floatingPhone">Número de teléfono</label>
                         <div class="invalid-feedback">
-                          Proporciona una contraseña válida
+                          Proporciona una número de teléfono válido
                         </div>
                       </div>
                       <p class="text-danger m-1">Esta acción no se puede deshacer. Procede con cuidado</p>              
@@ -432,8 +432,8 @@
                         <th>Cédula</th>
                         <th>E-mail</th>
                         <th>Nombre</th>
-                        <th>Usuario</th>
-                        <th>Contraseña</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
                     </tr>
                 </thead>
                 <tbody>

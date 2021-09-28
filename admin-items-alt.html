@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gestión de usuarios - Plantas y Materas</title>
+        <title>Gestión de productos - Plantas y Materas</title>
     
         <!--Vendor files-->
         <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
@@ -38,7 +38,7 @@
           </a>
         </li>
         <li>
-          <a href="admin-users.html" class="nav-link active">
+          <a href="admin-users.html" class="nav-link">
             <i class="me-2 uil uil-user-square"></i>
             <span>Usuarios</span> 
           </a>
@@ -56,7 +56,7 @@
           </a>
         </li>
         <li>
-          <a href="admin-items.html" class="nav-link ">
+          <a href="admin-items.html" class="nav-link active">
             <i class="me-2 uil uil-box"></i>
             <span>Productos</span>
           </a>
@@ -101,7 +101,7 @@
                 </a>
               </li>
               <li>
-                <a href="admin-users.html" class="nav-link active">
+                <a href="admin-users.html" class="nav-link">
                   <i class="me-2 uil uil-user-square"></i>
                   <span>Usuarios</span> 
                 </a>
@@ -119,7 +119,7 @@
                 </a>
               </li>
               <li>
-                <a href="admin-items.html" class="nav-link ">
+                <a href="admin-items.html" class="nav-link active">
                   <i class="me-2 uil uil-box"></i>
                   <span>Productos</span>
                 </a>
@@ -155,12 +155,12 @@
             <!--Welcome-->
             <div class="row pb-5 align-items-center">
               <div class="col-md-8 align-items-center align-middle">
-                <h1 class="mb-0">Gestión de usuarios</h1>
+                <h1 class="mb-0">Gestión de productos</h1>
               </div>
               <div class="col-md-4 g-0 my-auto">
                 <!--Illustration-->
                 <div class=" d-flex me-2 justify-content-end">
-                  <img class="big" src="img/undraw_Connecting_Teams.svg" alt="" width="180" >
+                  <img class="big" src="img/undraw_Order.svg" alt="" width="240">
                 </div>
               </div>
             </div>
@@ -169,26 +169,26 @@
             <div class="d-flex justify-content-center pb-5">
               <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                 <span class="d-block me-1">
-                  <i class="uil uil-user-plus fs-3 lead"></i>
+                  <i class="uil uil-plus-circle fs-3 lead"></i>
                 </span>
                 <span class="d-block align-middle fw-bold">
-                  Agregar usuario
+                  Agregar producto
                 </span>
               </button>
               <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
                 <span class="d-block me-1">
-                  <i class="uil uil-user-check fs-3 lead"></i>
+                  <i class="uil uil-check-circle fs-3 lead"></i>
                 </span>
                 <span class="d-block align-middle fw-bold">
-                  Actualizar usuario
+                  Actualizar producto
                 </span>
               </button>
               <button class="mx-2 align-items-center btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
                 <span class="d-block me-1">
-                  <i class="uil uil-user-times fs-3 lead"></i>
+                  <i class="uil uil-times-circle fs-3 lead"></i>
                 </span>
                 <span class="d-block align-middle fw-bold">
-                  Eliminar usuario
+                  Eliminar producto
                 </span>
               </button>
             </div><!--End Buttons-->
@@ -199,52 +199,60 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar usuario</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar producto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <form method="POST" class="needs-validation" novalidate autocomplete="off">                 
                     <!--Form fields-->
                     <div class="modal-body">
-                        <!--ID-->
-                        <div class="form-floating mb-3">
-                          <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
-                          <label for="floatingId">Cédula de ciudadanía</label>
-                          <div class="invalid-feedback">
-                            Proporciona la cédula del usuario
-                          </div>
+                      <!--ID-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
+                        <label for="floatingId">Código del producto</label>
+                        <div class="invalid-feedback">
+                          Proporciona el código del producto
                         </div>
-                        <!--Name-->
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
-                          <label for="floatingName">Nombre completo</label>
-                          <div class="invalid-feedback">
-                            Proporciona el nombre completo
-                          </div>
+                      </div>
+                      <!--Name-->
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="Suculenta" required>
+                        <label for="floatingName">Nombre del producto</label>
+                        <div class="invalid-feedback">
+                          Proporciona el nombre del producto
                         </div>
-                        <!--Email-->
-                        <div class="form-floating mb-3">
-                          <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
-                          <label for="floatingEmail">Correo electrónico</label>
-                          <div class="invalid-feedback">
-                            Proporciona un correo electrónico válido
-                          </div>
+                      </div>
+                      <!--VAT-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingVAT" placeholder="19" required>
+                        <label for="floatingVAT">IVA(%)</label>
+                        <div class="invalid-feedback">
+                          Proporciona un valor de IVA válido
                         </div>
-                        <!--User-->
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
-                          <label for="floatingUser">Nombre de usuario</label>
-                          <div class="invalid-feedback">
-                            Proporciona un nombre de usuario válido
-                          </div>
+                      </div>
+                      <!--NIT-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingNIT" placeholder="70041053" required>
+                        <label for="floatingNIT">NIT del proveedor</label>
+                        <div class="invalid-feedback">
+                          Proporciona un NIT válido
                         </div>
-                        <!--Password-->
-                        <div class="form-floating">
-                          <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
-                          <label for="floatingPass">Contraseña</label>
-                          <div class="invalid-feedback">
-                            Proporciona una contraseña válida
-                          </div>
-                        </div>                 
+                      </div>
+                      <!--Buy price-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingBuyp" placeholder="15000" required>
+                        <label for="floatingBuyp">Precio de compra</label>
+                        <div class="invalid-feedback">
+                          Proporciona un precio de compra válido
+                        </div>
+                      </div>
+                      <!--Sell price-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingSellp" placeholder="30000" required>
+                        <label for="floatingSellp">Precio de venta</label>
+                        <div class="invalid-feedback">
+                          Proporciona un precio de venta válido
+                        </div>
+                      </div>               
                     </div><!--End Form fields-->
                     <!--Submit buttons-->
                     <div class="modal-footer">
@@ -275,7 +283,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Actualizar usuario</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Actualizar producto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <form method="POST" class="needs-validation" novalidate="" autocomplete="off">                 
@@ -284,44 +292,52 @@
                       <!--ID-->
                       <div class="form-floating mb-3">
                         <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
-                        <label for="floatingId">Cédula de ciudadanía</label>
+                        <label for="floatingId">Código del producto</label>
                         <div class="invalid-feedback">
-                          Proporciona la cédula del usuario
+                          Proporciona el código del producto
                         </div>
                       </div>
                       <!--Name-->
                       <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
-                        <label for="floatingName">Nombre completo</label>
+                        <input type="text" class="form-control" id="floatingName" placeholder="Suculenta" required>
+                        <label for="floatingName">Nombre del producto</label>
                         <div class="invalid-feedback">
-                          Proporciona el nombre completo
+                          Proporciona el nombre del producto
                         </div>
                       </div>
-                      <!--Email-->
+                      <!--VAT-->
                       <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
-                        <label for="floatingEmail">Correo electrónico</label>
+                        <input type="number" class="form-control" id="floatingVAT" placeholder="19" required>
+                        <label for="floatingVAT">IVA(%)</label>
                         <div class="invalid-feedback">
-                          Proporciona un correo electrónico válido
+                          Proporciona un valor de IVA válido
                         </div>
                       </div>
-                      <!--User-->
+                      <!--NIT-->
                       <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
-                        <label for="floatingUser">Nombre de usuario</label>
+                        <input type="number" class="form-control" id="floatingNIT" placeholder="70041053" required>
+                        <label for="floatingNIT">NIT del proveedor</label>
                         <div class="invalid-feedback">
-                          Proporciona un nombre de usuario válido
+                          Proporciona un NIT válido
                         </div>
                       </div>
-                      <!--Password-->
-                      <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
-                        <label for="floatingPass">Contraseña</label>
+                      <!--Buy price-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingBuyp" placeholder="15000" required>
+                        <label for="floatingBuyp">Precio de compra</label>
                         <div class="invalid-feedback">
-                          Proporciona una contraseña válida
+                          Proporciona un precio de compra válido
+                        </div>
+                      </div>
+                      <!--Sell price-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingSellp" placeholder="30000" required>
+                        <label for="floatingSellp">Precio de venta</label>
+                        <div class="invalid-feedback">
+                          Proporciona un precio de venta válido
                         </div>
                       </div>                 
-                  </div><!--End Form fields-->
+                    </div><!--End Form fields-->
                     <!--Submit buttons-->
                     <div class="modal-footer">
                       <button type="button" class="mx-1 align-items-center btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -351,7 +367,7 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Eliminar usuario</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar producto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <form method="POST" class="needs-validation" novalidate="" autocomplete="off">                 
@@ -360,43 +376,51 @@
                       <!--ID-->
                       <div class="form-floating mb-3">
                         <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
-                        <label for="floatingId">Cédula de ciudadanía</label>
+                        <label for="floatingId">Código del producto</label>
                         <div class="invalid-feedback">
-                          Proporciona la cédula del usuario
+                          Proporciona el código del producto
                         </div>
                       </div>
                       <!--Name-->
                       <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
-                        <label for="floatingName">Nombre completo</label>
+                        <input type="text" class="form-control" id="floatingName" placeholder="Suculenta" required>
+                        <label for="floatingName">Nombre del producto</label>
                         <div class="invalid-feedback">
-                          Proporciona el nombre completo
+                          Proporciona el nombre del producto
                         </div>
                       </div>
-                      <!--Email-->
+                      <!--VAT-->
                       <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
-                        <label for="floatingEmail">Correo electrónico</label>
+                        <input type="number" class="form-control" id="floatingVAT" placeholder="19" required>
+                        <label for="floatingVAT">IVA(%)</label>
                         <div class="invalid-feedback">
-                          Proporciona un correo electrónico válido
+                          Proporciona un valor de IVA válido
                         </div>
                       </div>
-                      <!--User-->
+                      <!--NIT-->
                       <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingUser" placeholder="JohnDoe" required>
-                        <label for="floatingUser">Nombre de usuario</label>
+                        <input type="number" class="form-control" id="floatingNIT" placeholder="70041053" required>
+                        <label for="floatingNIT">NIT del proveedor</label>
                         <div class="invalid-feedback">
-                          Proporciona un nombre de usuario válido
+                          Proporciona un NIT válido
                         </div>
                       </div>
-                      <!--Password-->
+                      <!--Buy price-->
                       <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPass" placeholder="secret" required>
-                        <label for="floatingPass">Contraseña</label>
+                        <input type="number" class="form-control" id="floatingBuyp" placeholder="15000" required>
+                        <label for="floatingBuyp">Precio de compra</label>
                         <div class="invalid-feedback">
-                          Proporciona una contraseña válida
+                          Proporciona un precio de compra válido
                         </div>
                       </div>
+                      <!--Sell price-->
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingSellp" placeholder="30000" required>
+                        <label for="floatingSellp">Precio de venta</label>
+                        <div class="invalid-feedback">
+                          Proporciona un precio de venta válido
+                        </div>
+                      </div>     
                       <p class="text-danger m-1">Esta acción no se puede deshacer. Procede con cuidado</p>              
                   </div><!--End Form fields-->
                     <!--Submit buttons-->
@@ -429,11 +453,12 @@
               <table id="dataTable" class="table table-responsive table-striped"  style="width:100%">
                 <thead>
                     <tr>
-                        <th>Cédula</th>
-                        <th>E-mail</th>
-                        <th>Nombre</th>
-                        <th>Usuario</th>
-                        <th>Contraseña</th>
+                        <th>Código</th>
+                        <th>Producto</th>
+                        <th>%IVA</th>
+                        <th>NIT</th>
+                        <th>Precio compra</th>
+                        <th>Precio venta</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -443,12 +468,14 @@
                         <td>Lorem Ipsum</td>
                         <td>loremipsum</td>
                         <td>dolorsit664</td>
+                        <td>dolorsit664</td>
                     </tr>
                     <tr>
                         <td>1074921803</td>
                         <td>admin@contoso.com</td>
                         <td>Contoso Administrator</td>
                         <td>contosoadmin</td>
+                        <td>2c0ntoso11</td>
                         <td>2c0ntoso11</td>
                     </tr>
                     <tr>
@@ -457,6 +484,7 @@
                         <td>Sanders Clark</td>
                         <td>sanderss</td>
                         <td>z9qwo4lj.</td>
+                        <td>z9qwo4lj.</td>
                     </tr>
                     <tr>
                         <td>1094872649</td>
@@ -464,12 +492,14 @@
                         <td>Rosalía Vásquez</td>
                         <td>rosalia.vt</td>
                         <td>guantera918</td>
+                        <td>guantera918</td>
                     </tr>
                     <tr>
                       <td>1076398462</td>
                       <td>nate7@outlook.com</td>
                       <td>Nate Seven</td>
                       <td>nate7</td>
+                      <td>nattt82ha</td>
                       <td>nattt82ha</td>
                   </tr>
                 </tbody>
