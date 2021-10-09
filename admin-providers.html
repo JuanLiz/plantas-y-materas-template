@@ -167,7 +167,7 @@
 
             <!--Buttons-->
             <div class="d-flex justify-content-center pb-5">
-              <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+              <button class="mx-2 align-items-center  btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                 <span class="d-block me-1">
                   <i class="uil uil-plus-circle fs-3 lead"></i>
                 </span>
@@ -175,7 +175,7 @@
                   Agregar proveedor
                 </span>
               </button>
-              <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
+              <button class="mx-2 align-items-center  btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
                 <span class="d-block me-1">
                   <i class="uil uil-check-circle fs-3 lead"></i>
                 </span>
@@ -209,6 +209,7 @@
                       <div class="form-floating mb-3">
                         <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
                         <label for="floatingId">NIT</label>
+                        <div id="emailHelp" class="form-text">Este dato no se podrá cambiar mas adelante</div>
                         <div class="invalid-feedback">
                           Proporciona el NIT del proveedor
                         </div>
@@ -380,47 +381,7 @@
                         <div class="invalid-feedback">
                           Proporciona el NIT del proveedor
                         </div>
-                      </div>
-                      <!--Name-->
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" placeholder="John Doe" required>
-                        <label for="floatingName">Nombre del proveedor</label>
-                        <div class="invalid-feedback">
-                          Proporciona el nombre del proveedor
-                        </div>
-                      </div>
-                      <!--City-->
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingCity" placeholder="Bogotá" required>
-                        <label for="floatingCity">Ciudad</label>
-                        <div class="invalid-feedback">
-                          Proporciona una ciudad válida
-                        </div>
-                      </div>
-                      <!--Email-->
-                      <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
-                        <label for="floatingEmail">Correo electrónico</label>
-                        <div class="invalid-feedback">
-                          Proporciona un correo electrónico válido
-                        </div>
-                      </div>
-                      <!--Address-->
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingAddress" placeholder="Av. 7 # 15-27" required>
-                        <label for="floatingAddress">Dirección</label>
-                        <div class="invalid-feedback">
-                          Proporciona una dirección válida
-                        </div>
-                      </div>
-                      <!--Phone-->
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingPhone" placeholder="3002485723" required>
-                        <label for="floatingPhone">Número de teléfono</label>
-                        <div class="invalid-feedback">
-                          Proporciona una número de teléfono válido
-                        </div>
-                      </div>     
+                      </div>    
                       <p class="text-danger m-1">Esta acción no se puede deshacer. Procede con cuidado</p>              
                   </div><!--End Form fields-->
                     <!--Submit buttons-->
@@ -514,7 +475,7 @@
   </div>
   
   <!--JS Scripts-->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" ></script>
   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>

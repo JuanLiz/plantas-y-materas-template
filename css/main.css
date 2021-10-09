@@ -73,6 +73,10 @@ span {
     justify-content: center;
 }
 
+.btn-l {
+    line-height: 1.75;
+}
+
 .background{
     padding: 0;
     height: 100%;

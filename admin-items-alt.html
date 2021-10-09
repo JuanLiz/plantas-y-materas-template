@@ -167,7 +167,7 @@
 
             <!--Buttons-->
             <div class="d-flex justify-content-center pb-5">
-              <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+              <button class="mx-2 align-items-center  btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                 <span class="d-block me-1">
                   <i class="uil uil-plus-circle fs-3 lead"></i>
                 </span>
@@ -175,7 +175,7 @@
                   Agregar producto
                 </span>
               </button>
-              <button class="mx-2 align-items-center btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
+              <button class="mx-2 align-items-center  btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal">
                 <span class="d-block me-1">
                   <i class="uil uil-check-circle fs-3 lead"></i>
                 </span>
@@ -209,6 +209,7 @@
                       <div class="form-floating mb-3">
                         <input type="number" class="form-control align-middle" id="floatingId" placeholder="70041053" required>
                         <label for="floatingId">Código del producto</label>
+                        <div id="emailHelp" class="form-text">Este dato no se podrá cambiar mas adelante</div>
                         <div class="invalid-feedback">
                           Proporciona el código del producto
                         </div>
@@ -380,47 +381,7 @@
                         <div class="invalid-feedback">
                           Proporciona el código del producto
                         </div>
-                      </div>
-                      <!--Name-->
-                      <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" placeholder="Suculenta" required>
-                        <label for="floatingName">Nombre del producto</label>
-                        <div class="invalid-feedback">
-                          Proporciona el nombre del producto
-                        </div>
-                      </div>
-                      <!--VAT-->
-                      <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="floatingVAT" placeholder="19" required>
-                        <label for="floatingVAT">IVA(%)</label>
-                        <div class="invalid-feedback">
-                          Proporciona un valor de IVA válido
-                        </div>
-                      </div>
-                      <!--NIT-->
-                      <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="floatingNIT" placeholder="70041053" required>
-                        <label for="floatingNIT">NIT del proveedor</label>
-                        <div class="invalid-feedback">
-                          Proporciona un NIT válido
-                        </div>
-                      </div>
-                      <!--Buy price-->
-                      <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="floatingBuyp" placeholder="15000" required>
-                        <label for="floatingBuyp">Precio de compra</label>
-                        <div class="invalid-feedback">
-                          Proporciona un precio de compra válido
-                        </div>
-                      </div>
-                      <!--Sell price-->
-                      <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="floatingSellp" placeholder="30000" required>
-                        <label for="floatingSellp">Precio de venta</label>
-                        <div class="invalid-feedback">
-                          Proporciona un precio de venta válido
-                        </div>
-                      </div>     
+                      </div>   
                       <p class="text-danger m-1">Esta acción no se puede deshacer. Procede con cuidado</p>              
                   </div><!--End Form fields-->
                     <!--Submit buttons-->
@@ -514,7 +475,7 @@
   </div>
   
   <!--JS Scripts-->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" ></script>
   <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>

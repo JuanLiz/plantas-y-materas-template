@@ -36,10 +36,14 @@
                         <div class="container justify-content-center pb-5">       
                             <!--Login card-->
                             <div class="noborder card">
-                                <div class="card-body h-100"> 
+                                <div class="card-body h-100" style="margin-bottom: 15%;"> 
                                     <h1 class="card-title pcolor">Iniciar sesión</h1>
                                     <form action="login" method="POST" class="needs-validation" novalidate="" autocomplete="off">
-                                        <div class="mt-5">
+                                        <div class="pt-3">
+                                            <div class="alert alert-danger d-flex align-items-center fade show" role="alert">
+                                                <i class="uil uil-exclamation-triangle lead me-3" style="font-size: 2.2rem;"></i>
+                                                <strong>Los datos ingresados son incorrectos. Intenta de nuevo</strong>
+                                            </div>
                                             <label class="mb-2 input-label" for="username">Nombre de usuario</label>
                                             <input id="username" type="text" class="form-control " name="username" value="" required="" autofocus="">
                                             <div class="invalid-feedback">

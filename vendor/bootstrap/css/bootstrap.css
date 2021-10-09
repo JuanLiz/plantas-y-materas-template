@@ -4843,8 +4843,11 @@ textarea.form-control-lg {
   position: relative;
   padding: 1rem 1rem;
   margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-left: .5rem solid transparent;
+  border-top: .2rem solid transparent;
+  border-right: .2rem solid transparent;
+  border-bottom: .2rem solid transparent;
+  border-radius: .5rem;
 }
 
 .alert-heading {
@@ -4912,9 +4915,8 @@ textarea.form-control-lg {
 }
 
 .alert-danger {
-  color: #842029;
-  background-color: #f8d7da;
-  border-color: #f5c2c7;
+  color: #dc3545;
+  border-color: #dc3545;
 }
 .alert-danger .alert-link {
   color: #6a1a21;
