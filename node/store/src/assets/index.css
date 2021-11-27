@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:wght@700;800&display=swap');
+@import url('https://unicons.iconscout.com/release/v4.0.0/css/line.css');
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+span {
+    vertical-align: middle;
+    
+}
+
+.content{
+    overflow-y: auto;
+    height: fit-content;
+}
+
+.mainc {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.chart-area {
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      height: 20rem;
+    }
+  }
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+.active {
+    color: #39aa36 !important;
+}
+
+.nav a{
+    color: #212529;
+}
+
+.nav i{
+    font-size: 1.8rem;
+    vertical-align: middle;
+}
+
+.card th{
+    padding-right: 0;
+}
+
+.btn {
+    margin: 0;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.btn-l {
+    line-height: 1.75;
+}
+
+.background{
+    padding: 0;
+    height: 100%;
+    position: absolute;
+}
+
+.noborder{
+    border: 0px solid rgba(0, 0, 0, 0.125);
+}
+
+.nomargin{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.bg-img{
+    background-image: url(img/bg.png);
+    background-size: cover;
+    min-width: 100%;
+    vertical-align: top;
+    margin-top: 0px;
+    height: 100%;
+    background-color: #ffffff;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.login{
+    margin-top: 0;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    z-index: 4;
+}
+
+.pcolor {
+    color: #39aa36;
+}
+
+.pcolorb {
+    background-color: #39aa36;
+    outline-color: #39aa36;
+}
+
+
+.lastproducts i{
+    font-size: 1.8rem;
+}
+
+.headerimg {
+    width: 300px;
+}
+
+@media (max-width:768px) {
+    .sidebar{
+        display: none;
+    }
+}
+
+@media (max-width:425px) {
+    .big{
+        display: none;
+    }
+}
+
+@media (min-width:1024px) {
+    .little{
+        display: none !important;
+    }
+}
