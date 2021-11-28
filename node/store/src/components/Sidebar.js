@@ -1,9 +1,10 @@
 import React from "react";
 import { Outlet, NavLink  } from "react-router-dom";
+import "bootstrap/js/dist/dropdown"
 import "bootstrap/js/dist/collapse"
 
-import olivia from '../assets/img/user.jpg'
 import { ReactComponent as Logo } from '../assets/img/logo.svg';
+import { Profile } from "./Profile";
 
 class Sidebar extends React.Component {
     render(){
@@ -117,18 +118,13 @@ class Sidebar extends React.Component {
                 </ul>
                         
             </div>
-            <ul className="navbar-nav ms-auto mt-1">
-            <li className="nav-item">
-                            <img src={olivia} className="rounded-circle mx-2" width="35" alt='4wok'/>
-                            Admin
-                        </li>
-                        </ul>
-                    </div>
-                    </nav>{/*End Navbar*/}
-                    {/*Para traer la pagina anidada, el inicio, los productos, etc */}
-                    <Outlet />
-                </div>   
-            </div>
+            <Profile />
+        </div>
+        </nav>{/*End Navbar*/}
+         {/*Para traer la pagina anidada, el inicio, los productos, etc */}
+         <Outlet />
+         </div>   
+        </div>
  
 
         )

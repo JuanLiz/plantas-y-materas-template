@@ -19,7 +19,7 @@ class Router extends Component {
                         <Route path='city' element={<Sidebar />}>
                             <Route path='home' element={<Home />} />
                             <Route path='products' element={<Products/>} />
-                            /*<Route path='products/update/:id' element={<UpdateProduct/>} />*/
+                            <Route path='products/update/:id' element={<UpdateProduct/>} />
                             <Route path='customers' element={<Customers />} />
                             <Route path='customers/update/:id' element={<UpdateCustomer/>} />
                         </Route>

@@ -117,6 +117,10 @@ span {
     z-index: 4;
 }
 
+.loginbutton i{
+    font-size: 1.8rem;
+}
+
 .pcolor {
     color: #39aa36;
 }
