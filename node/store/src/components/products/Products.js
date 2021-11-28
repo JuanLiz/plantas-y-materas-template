@@ -1,32 +1,67 @@
 import React from "react";
 import axios from 'axios';
+import {Link } from "react-router-dom"
+import swal from "sweetalert"
+import CreateProduct from "./CreateProduct";
+
+
+
 import 'bootstrap/js/dist/modal'
 import 'jquery/dist/jquery.min.js';
 import "datatables.net-bs5/js/dataTables.bootstrap5"
 import "datatables.net-bs5/css/dataTables.bootstrap5.css"
 import $ from 'jquery'; 
 
-import headerimg from '../assets/img/undraw_Order.svg'
+import headerimg from '../../assets/img/undraw_Order.svg'
 
 class Products extends React.Component {
+    //Inicializar Datatable
     componentDidMount() {
-        //initialize datatable
         $(document).ready(function () {
             $('#dataTable').DataTable();
         });
     }
-    
+  
+    //Guardar productos obtenidos
     state = {
         products:[]
     }
+
+    //Para agregar producto
+    componentWillMount(){ 
+      this.getProducts()
+    }
+
+    getProducts = () => {
+      axios.get('http://localhost:8080/api/products/')
+      .then(res =>{
+          console.log(res.data)
+          this.setState(
+              {products:res.data}
+          )
+      })
+    }
+
+        //Borrar cliente
+        deleteProduct = (id) => {
+          axios.delete('http://localhost:8080/api/products/product/'+id)
+            .then(res=>{
+              this.setState({
+                status:'deleted'
+              })
+              //Notificación exitosa
+              swal(
+                "Borrado correcto",
+                "Producto borrado exitosamente",
+                "success"
+              ).then((result) => {
+                //Recargar página para ver cambios
+                window.location.reload(true)
+              })
+            })
+        }
+
     render(){
-        axios.get('http://localhost:8080/api/products/')
-        .then(res =>{
-            console.log(res.data)
-            this.setState(
-                {products:res.data}
-            )
-        })
         return(
             /*Main content*/
             <div className="content p-4">
@@ -47,6 +82,15 @@ class Products extends React.Component {
       
                   {/*Buttons*/}
                   <div className="d-flex justify-content-center pb-5">
+                  <button className="mx-2 align-items-center  btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                      <span className="d-block me-1">
+                        <i className="uil uil-plus-circle fs-3 lead"></i>
+                      </span>
+                      <span className="d-block align-middle fw-bold">
+                        Agregar productos 
+                      </span>
+                    </button>
+                    {/*Upload products pending to do 
                     <button className="mx-2 align-items-center  btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
                       <span className="d-block me-1">
                         <i className="uil uil-file-upload fs-3 lead"></i>
@@ -55,8 +99,11 @@ class Products extends React.Component {
                         Cargar productos
                       </span>
                     </button>
+                    */}
                   </div>{/*End Buttons*/}
-      
+
+                  <CreateProduct />
+
                   {/* Modals*/}
                   {/*Upload Modal*/}
                   <div className="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
@@ -125,7 +172,7 @@ class Products extends React.Component {
       
                   {/*Users table*/}            
                   <div className="p-2 mx-auto">
-                    <table id="dataTable" className=" w-100 table table-responsive table-striped">
+                    <table className=" w-100 table table-responsive table-striped">
                       <thead>
                           <tr>
                               <th>Código</th>
@@ -134,6 +181,7 @@ class Products extends React.Component {
                               <th>%IVA</th>
                               <th>Precio compra</th>
                               <th>Precio venta</th>
+                              <th>Acciones</th>
                           </tr>
                       </thead>
                     {/*Traer productos del API*/}
@@ -149,6 +197,19 @@ class Products extends React.Component {
                                             <td>{product.vat}</td>
                                             <td>{product.buyprice}</td>                                       
                                             <td>{product.sellprice}</td>
+                                            <td>  
+                                            <Link to={'update/'+product._id} className=" me-1 align-items-center btn btn-outline-primary">
+                                              <i className="uil uil-edit fs-6"></i>
+                                            </Link>
+                                            <button className="align-items-center btn btn-outline-danger"
+                                            onClick= {
+                                              () => {
+                                                this.deleteProduct(product._id)
+                                              }
+                                            }>
+                                              <i className="uil uil-trash-alt fs-6"></i>
+                                            </button>
+                                            </td>
                                         </tr>
                                     </React.Fragment>
                                 )

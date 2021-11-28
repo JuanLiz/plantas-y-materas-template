@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet} from "react-router-dom";
+import { Outlet, NavLink  } from "react-router-dom";
 import "bootstrap/js/dist/collapse"
 
 import olivia from '../assets/img/user.jpg'
@@ -19,16 +19,16 @@ class Sidebar extends React.Component {
 
                     <hr/>
                     <li className="nav-item">
-                    <a href="home" className="nav-link" aria-current="page">
+                    <NavLink to="home" className="nav-link">
                         <i className="me-2 uil uil-estate"></i> 
                         <span>Inicio</span> 
-                    </a>
+                    </NavLink>
                     </li>
                     <li>
-                    <a href="products" className="nav-link ">
+                    <NavLink to="products" className="nav-link">
                         <i className="me-2 uil uil-box"></i>
                         <span>Productos</span>
-                    </a>
+                    </NavLink>
                     </li>
                     {/*<li>
                     <a href="providers" className="nav-link">
@@ -37,22 +37,22 @@ class Sidebar extends React.Component {
                     </a>
                     </li>*/}
                     <li>
-                    <a href="customers" className="nav-link">
+                    <NavLink to="customers" className="nav-link">
                         <i className="me-2 uil uil-user-square"></i>
                         <span>Clientes</span> 
-                    </a>
+                    </NavLink>
                     </li>       
                     <li>
-                    <a href="sales" className="nav-link ">
+                    <NavLink to="sales" className="nav-link">
                         <i className="me-2 uil uil-shop"></i>
                         <span>Ventas</span>
-                    </a>
+                    </NavLink>
                     </li>
                     <li>
-                    <a href="admin-reports.html" className="nav-link ">
+                    <NavLink to="reports" className="nav-link">
                         <i className="me-2 uil uil-chart"></i>
                         <span>Reportes</span>
-                    </a>
+                    </NavLink>
                     </li>
                 </ul>
                 </div>{/*End Sidebar*/}
@@ -79,40 +79,40 @@ class Sidebar extends React.Component {
 
                     <hr/>
                     <li className="nav-item">
-                    <a href="home" className="nav-link" aria-current="page">
+                    <NavLink to="home" className="nav-link">
                         <i className="me-2 uil uil-estate"></i> 
                         <span>Inicio</span> 
-                    </a>
+                    </NavLink>
                     </li>
                     <li>
-                    <a href="products" className="nav-link ">
+                    <NavLink to="products" className="nav-link">
                         <i className="me-2 uil uil-box"></i>
                         <span>Productos</span>
-                    </a>
+                    </NavLink>
                     </li>
-                    <li>
+                    {/*<li>
                     <a href="providers" className="nav-link">
                         <i className="me-2 uil uil-truck"></i>
                         <span>Proveedores</span>
                     </a>
-                    </li>
+                    </li>*/}
                     <li>
-                    <a href="customers" className="nav-link">
+                    <NavLink to="customers" className="nav-link">
                         <i className="me-2 uil uil-user-square"></i>
                         <span>Clientes</span> 
-                    </a>
+                    </NavLink>
                     </li>       
                     <li>
-                    <a href="sales" className="nav-link ">
+                    <NavLink to="sales" className="nav-link">
                         <i className="me-2 uil uil-shop"></i>
                         <span>Ventas</span>
-                    </a>
+                    </NavLink>
                     </li>
                     <li>
-                    <a href="admin-reports.html" className="nav-link ">
+                    <NavLink to="reports" className="nav-link">
                         <i className="me-2 uil uil-chart"></i>
                         <span>Reportes</span>
-                    </a>
+                    </NavLink>
                     </li>
                 </ul>
                         
