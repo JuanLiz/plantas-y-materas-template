@@ -19,12 +19,12 @@ class Sidebar extends React.Component {
                     </a >
 
                     <hr/>
-                    <li className="nav-item">
+                    {/*<li className="nav-item">
                     <NavLink to="home" className="nav-link">
                         <i className="me-2 uil uil-estate"></i> 
                         <span>Inicio</span> 
                     </NavLink>
-                    </li>
+                    </li>*/}
                     <li>
                     <NavLink to="products" className="nav-link">
                         <i className="me-2 uil uil-box"></i>

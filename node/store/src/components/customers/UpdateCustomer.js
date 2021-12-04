@@ -75,8 +75,8 @@ update_customer = (e) => {
         //Mostrar notificación
         if (this.state.status==='success'){
           swal(
-            "Registro correcto",
-            "Cliente añadido exitosamente",
+            "Actualización correcta",
+            "Cliente actualizado exitosamente",
             "success"
           )
           return (

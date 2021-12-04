@@ -34,7 +34,7 @@ export const Login = () => {
                                             onClick= {
                                                 () => loginWithRedirect()
                                             }>
-                                            <i class="uil uil-keyhole-circle lead me-2"></i>
+                                            <i class="uil uil-padlock lead me-2"></i>
                                             <strong className='fs-5' >Ingresa con Auth0</strong>
                                         </button>
                                     </div>

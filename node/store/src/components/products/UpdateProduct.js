@@ -93,7 +93,7 @@ update_product = (e) => {
                   
                   {/*Form fields*/}
                   <div className="modal-body">
-                  <h2 className="py-5 ">Actualizar cliente</h2>
+                  <h2 className="py-5 ">Actualizar producto</h2>
                     {/*ID*/}
                     <div className="form-floating mb-3">
                       <input type="number" className="form-control align-middle" name="idproduct" ref={this.idproduct} defaultValue={this.state.product.idproduct} placeholder="70041053" required />
