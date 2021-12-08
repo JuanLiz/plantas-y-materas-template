@@ -4,8 +4,6 @@ import {Link } from "react-router-dom"
 import swal from "sweetalert"
 import CreateProduct from "./CreateProduct";
 
-
-
 import 'bootstrap/js/dist/modal'
 import 'jquery/dist/jquery.min.js';
 import "datatables.net-bs5/js/dataTables.bootstrap5"

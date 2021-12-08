@@ -59,7 +59,7 @@ class Sidebar extends React.Component {
                 </div>{/*End Sidebar*/}
 
                 <div className="w-100">
-                                    {/*Navbar*/}
+                {/*Navbar*/}
                 <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light fw-bold p-3">
                     <div className="container-fluid">
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -116,7 +116,24 @@ class Sidebar extends React.Component {
                     </NavLink>
                     </li>
                 </ul>
-                        
+                <div>
+                    <button type="button" className="btn btn-outline-dark dropdown-toggle align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span className="d-flex me-1">
+                        <i className="uil uil-map-marker-alt fs-3 lead"></i>
+                      </span>
+                      <span className="d-flex fw-bold ">
+                        Bogotá
+                      </span>
+                    </button>
+                    
+                    <ul className="dropdown-menu">
+                        <li><span className="dropdown-item-text">Selecciona la ciudad</span></li>
+                        <li><hr className="dropdown-divider" /></li>
+                        <li><a className="dropdown-item" href="#">Bogotá</a></li>
+                        <li><a className="dropdown-item" href="#">Cali</a></li>
+                        <li><a className="dropdown-item" href="#">Barranquilla</a></li>
+                    </ul>
+                </div>
             </div>
             <Profile />
         </div>

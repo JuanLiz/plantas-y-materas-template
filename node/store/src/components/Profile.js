@@ -18,7 +18,7 @@ export const Profile = () => {
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         
-                            <li><a class="dropdown-item" href="#" onClick={() => logout({returnTo:window.location.origin})}>Logout</a></li>
+                            <li><a class="dropdown-item" href="#" onClick={() => logout({returnTo:window.location.origin})}>Cerrar sesión</a></li>
                         </ul>
                     </li>
                 </ul>
