@@ -33,9 +33,10 @@ class Products extends React.Component {
     getProducts = () => {
       axios.get('http://localhost:8080/api/products/')
       .then(res =>{
-          console.log(res.data)
+          const products = res.data
           this.setState(
-              {products:res.data}
+              //Productos filtrados por ciudad
+              {products:products.filter(product => product.city.includes('BOG'))}
           )
       })
     }

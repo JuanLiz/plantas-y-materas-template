@@ -32,9 +32,10 @@ class Customers extends React.Component {
     getCustomers = () => {
       axios.get('http://localhost:8080/api/customers/')
       .then(res =>{
-          console.log(res.data)
+        const customers = res.data
           this.setState(
-              {customers:res.data}
+              //Clientes filtrados por ciudad
+              {customers:customers.filter(customer => customer.city.includes('BOG'))}
           )
       })
     }

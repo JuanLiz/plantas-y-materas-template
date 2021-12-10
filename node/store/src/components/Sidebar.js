@@ -7,6 +7,7 @@ import { ReactComponent as Logo } from '../assets/img/logo.svg';
 import { Profile } from "./Profile";
 
 class Sidebar extends React.Component {
+
     render(){
         
         return(
@@ -131,7 +132,7 @@ class Sidebar extends React.Component {
                         <li><hr className="dropdown-divider" /></li>
                         <li><a className="dropdown-item" href="#">Bogotá</a></li>
                         <li><a className="dropdown-item" href="#">Cali</a></li>
-                        <li><a className="dropdown-item" href="#">Barranquilla</a></li>
+                        <li><a className="dropdown-item" href="#">Medellín</a></li>
                     </ul>
                 </div>
             </div>

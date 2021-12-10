@@ -9,6 +9,7 @@ import Customers from './components/customers/Customers';
 import UpdateCustomer from "./components/customers/UpdateCustomer";
 import UpdateProduct from "./components/products/UpdateProduct";
 import Sales from "./components/sales/Sales";
+import Reports from "./components/Reports";
 
 
 class Router extends Component {
@@ -24,6 +25,7 @@ class Router extends Component {
                             <Route path='customers' element={<Customers />} />
                             <Route path='customers/update/:id' element={<UpdateCustomer/>} />
                             <Route path='sales' element={<Sales />} />
+                            <Route path='reports' element={<Reports/>} />
                         </Route>
                     </Route>
                 </Routes>
