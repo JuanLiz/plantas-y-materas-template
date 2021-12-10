@@ -158,6 +158,18 @@ span {
     transform: rotate(-180deg);
 }
 
+.cells {
+    display: table!important;
+}
+
+.cells tbody tr{
+    display: table-cell!important;
+}
+
+.cells tbody tr td {
+    display: block!important;
+}
+
 @media (max-width:768px) {
     .sidebar{
         display: none;

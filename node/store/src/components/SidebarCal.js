@@ -8,6 +8,18 @@ import { Profile } from "./Profile";
 
 class Sidebar extends React.Component {
 
+    location = null
+    path = null
+    url = []
+
+    //Obtener ubicación de ruta
+    componentWillMount(){ 
+      this.path = window.location.pathname
+      this.url = this.path.split('/')
+      console.log(this.url)
+      this.location = this.url[2]
+    }
+
     render(){
         
         return(
@@ -123,16 +135,16 @@ class Sidebar extends React.Component {
                         <i className="uil uil-map-marker-alt fs-3 lead"></i>
                       </span>
                       <span className="d-flex fw-bold ">
-                        Bogotá
+                        Cali
                       </span>
                     </button>
                     
                     <ul className="dropdown-menu">
                         <li><span className="dropdown-item-text">Selecciona la ciudad</span></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Bogotá</a></li>
-                        <li><a className="dropdown-item" href="#">Cali</a></li>
-                        <li><a className="dropdown-item" href="#">Medellín</a></li>
+                        <li><NavLink to={"/bogota/"+this.location} className="dropdown-item">Bogotá</NavLink></li>
+                        <li><NavLink to={"/medellin/"+this.location} className="dropdown-item">Medellín</NavLink></li>
+                        <li><NavLink to={"/cali/"+this.location} className="dropdown-item">Cali</NavLink></li>
                     </ul>
                 </div>
             </div>

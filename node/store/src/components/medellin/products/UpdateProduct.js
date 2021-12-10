@@ -55,8 +55,8 @@ update_product = (e) => {
     idprovider: this.idprovider.current.value,
     vat: this.vat.current.value,
     buyprice: this.buyprice.current.value,
-    sellprice: this.sellprice.current.value
-
+    sellprice: this.sellprice.current.value,
+    city: 'MED'
   }
 
 
@@ -83,7 +83,7 @@ update_product = (e) => {
           )
           return (
               //Volver a pagina anterior
-              <Navigate to='/city/products'/>
+              <Navigate to='/medellin/products'/>
           )
         }
          
@@ -146,7 +146,7 @@ update_product = (e) => {
                   </div>{/*End Form fields*/}
                   {/*Submit buttons*/}
                   <div className="modal-footer">
-                    <NavLink to="/city/products" type="button" className="mx-1 align-items-center btn btn-outline-secondary">
+                    <NavLink to="/medellin/products" type="button" className="mx-1 align-items-center btn btn-outline-secondary">
                       <span className="d-block me-2">
                         <i className="uil uil-times fs-4"></i>
                       </span>

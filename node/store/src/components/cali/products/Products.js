@@ -10,7 +10,7 @@ import "datatables.net-bs5/js/dataTables.bootstrap5"
 import "datatables.net-bs5/css/dataTables.bootstrap5.css"
 import $ from 'jquery'; 
 
-import headerimg from '../../assets/img/undraw_Order.svg'
+import headerimg from '../../../assets/img/undraw_Order.svg'
 
 class Products extends React.Component {
     //Inicializar Datatable
@@ -36,7 +36,7 @@ class Products extends React.Component {
           const products = res.data
           this.setState(
               //Productos filtrados por ciudad
-              {products:products.filter(product => product.city.includes('BOG'))}
+              {products:products.filter(product => product.city.includes('CAL'))}
           )
       })
     }

@@ -9,7 +9,7 @@ import "datatables.net-bs5/js/dataTables.bootstrap5"
 import "datatables.net-bs5/css/dataTables.bootstrap5.css"
 import $ from 'jquery'; 
 
-import headerimg from '../assets/img/undraw_people_tax5.svg'
+import headerimg from '../../assets/img/undraw_reports.svg'
 
 class Reports extends React.Component {
     componentDidMount() {
@@ -37,7 +37,7 @@ class Reports extends React.Component {
         const customers = res.data
           this.setState(
               //Clientes filtrados por ciudad
-              {customers:customers.filter(customer => customer.city.includes('BOG'))}
+              {customers:customers.filter(customer => customer.city.includes('MED'))}
           )
         this.salespercustomer()
       })
@@ -50,7 +50,7 @@ class Reports extends React.Component {
         console.log(sales)
           this.setState(
               //Clientes filtrados por ciudad
-              {sales:sales.filter(sale => sale.city.includes('BOG'))}
+              {sales:sales.filter(sale => sale.city.includes('MED'))}
           )
       })
     }
@@ -60,6 +60,7 @@ class Reports extends React.Component {
       var fcustomers = this.state.customers.map(customer => ({
         idcustomer:customer.idcustomer, name:customer.name
       }))
+      //Traer ventas
       var sales = this.state.sales
       //Recorrer los clientes y agrupar ventas por cada uno
       var salespercustomer = fcustomers.map(customer => ({
@@ -92,12 +93,12 @@ class Reports extends React.Component {
                   {/*Welcome*/}
                   <div className="row pb-5 align-items-center">
                     <div className="col-md-8 align-items-center align-middle">
-                      <h1 className="mb-0">Gestión de clientes</h1>
+                      <h1 className="mb-0">Panel de reportes</h1>
                     </div>
                     <div className="col-md-4 g-0 my-auto">
                       {/*Illustration*/}
                       <div className=" d-flex me-2 justify-content-end">
-                        <img className="big" src={headerimg} alt="" width="230" />
+                        <img className="big" src={headerimg} alt="" width="300" />
                       </div>
                     </div>
                   </div>
@@ -187,8 +188,6 @@ class Reports extends React.Component {
                     </div>
                   </div>
                 </div>
-
-      
               </section>
             </div>/*End Main content*/
         )

@@ -26,8 +26,8 @@ create_customer = (e) => {
     name: this.name.current.value,
     email: this.email.current.value,
     address: this.address.current.value,
-    phone: this.phone.current.value
-
+    phone: this.phone.current.value,
+    city: 'BOG'
   }
 
   console.log(customer)

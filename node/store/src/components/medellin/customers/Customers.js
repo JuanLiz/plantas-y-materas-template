@@ -10,7 +10,7 @@ import "datatables.net-bs5/js/dataTables.bootstrap5"
 import "datatables.net-bs5/css/dataTables.bootstrap5.css"
 import $ from 'jquery'; 
 
-import headerimg from '../../assets/img/undraw_people_tax5.svg'
+import headerimg from '../../../assets/img/undraw_people_tax5.svg'
 
 class Customers extends React.Component {
     componentDidMount() {
@@ -35,7 +35,7 @@ class Customers extends React.Component {
         const customers = res.data
           this.setState(
               //Clientes filtrados por ciudad
-              {customers:customers.filter(customer => customer.city.includes('BOG'))}
+              {customers:customers.filter(customer => customer.city.includes('MED'))}
           )
       })
     }

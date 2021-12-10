@@ -8,7 +8,7 @@ import 'jquery/dist/jquery.min.js';
 import "datatables.net-bs5/js/dataTables.bootstrap5"
 import "datatables.net-bs5/css/dataTables.bootstrap5.css"
 
-import headerimg from '../../assets/img/undraw_empty_cart.svg'
+import headerimg from '../../../assets/img/undraw_empty_cart.svg'
 
 class Sales extends React.Component {
 
@@ -57,7 +57,7 @@ class Sales extends React.Component {
               const products = res.data
               this.setState({
                   //Productos filtrados por ciudad
-                    products:products.filter(product => product.city.includes('BOG')),
+                    products:products.filter(product => product.city.includes('MED')),
                 }
               )
           })
@@ -80,7 +80,7 @@ class Sales extends React.Component {
               const customers = res.data
                 this.setState(
                     //Clientes filtrados por ciudad
-                    {customers:customers.filter(customer => customer.city.includes('BOG'))}
+                    {customers:customers.filter(customer => customer.city.includes('MED'))}
                 )
             })
           }
@@ -130,7 +130,7 @@ class Sales extends React.Component {
             subtotal: this.state.subtotal,
             vat: this.state.totalvat,
             total: this.state.total,
-            city: 'BOG'
+            city: 'MED'
             }
         
             console.log(sale)
